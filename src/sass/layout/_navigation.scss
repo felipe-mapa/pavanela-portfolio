@@ -1,0 +1,122 @@
+// DESKTOP
+.navigation{
+    z-index: 1000;
+    position: fixed;
+    background-color: $color-black;
+    border-radius: 2rem;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+
+    &__icon {
+        text-decoration: none;
+        padding: 2rem;
+        font-weight: 400;
+        color: $color-white;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: -10%;
+        
+        &.active,
+        &:hover {
+            color: $color-black;
+            background-color: $color-white;
+            border-bottom: 0.4rem solid $color-red-dark;
+        }
+    }
+
+    &__toggle{
+        display: none;
+    }
+
+    @include respond(tab-port) {
+        align-items: center;
+        shadow: .2rem solid $color-grey-light-2;
+        border-radius: 2rem;
+        box-sizing: border-box;
+        display: flex;
+        height: 5rem;
+        justify-content: space-around;
+        left: 4rem;
+        position: fixed;
+        transition: all 0.75s cubic-bezier(1, -0.3, 0.35, 1.335);
+        top: 6rem;
+        max-width: none;
+        //overflow: visible;
+
+        &__item {
+            box-sizing: border-box;
+            padding: 0;
+            opacity: 0;
+            text-align: center;
+            transition: all 0.75s cubic-bezier(1, -0.3, 0.35, 1.335);
+            visibility: hidden;
+            width: 0;
+            height: 100%;
+            overflow:hidden;
+        }
+
+        &__icon {
+            height: 40%;
+            padding: 1.3rem;
+            margin: 0;
+        }
+
+        &__hamburger{
+            background-color: $color-white;
+            height: .5rem;
+            left: 1.8rem;
+            top: -2.2rem;
+            position: absolute;
+            transition: all 0.75s cubic-bezier(1, -0.3, 0.35, 1.335);
+            width: 3rem;
+
+            &--1{
+                transform: translateY(3.5rem);
+            }
+            &--2{
+                transform: translateY(4.5rem) scaleX(1);
+            }
+            &--3{
+                transform: translateY(5.5rem);
+            }
+        }
+
+        &__toggle-button{
+            cursor: pointer;
+            background-color: $color-black;
+            display: flex;
+            height: 6rem;
+            transition: all 0.75s cubic-bezier(1, -0.3, 0.35, 1.335);
+            width: 6.6rem;
+        }
+    }
+}
+
+//toggle checked
+#nav-toggle:checked {
+    & + #nav-toggle-button{
+        background-color: $color-red-dark;
+    }
+
+    & + #nav-toggle-button .navigation__hamburger--1{
+        transform: translateY(4.4rem) rotate(45deg);
+    }
+
+    & + #nav-toggle-button .navigation__hamburger--2{
+        transform: translateY(4.4rem) scaleX(0);
+    }
+
+    & + #nav-toggle-button .navigation__hamburger--3{
+        transform: translateY(4.4rem) rotate(-45deg);
+    }
+
+    & ~ .navigation__item{
+        opacity: 1;
+        visibility: visible;
+        width: 4.6rem;
+    }
+}

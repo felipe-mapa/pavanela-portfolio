@@ -1,0 +1,81 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    color: $color-black;
+}
+
+.heading-primary {
+    width: 100%;
+    margin-top: 15vh;
+    text-align: center;
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+    @include respond(phone) {
+        font-size: 5rem;
+    }
+    
+    &:hover {
+        transform: skewY(1deg) skewX(5deg) scale(1.1);
+    }
+    
+    &--1{
+        margin: 0;
+        background-image: linear-gradient(to right, $color-black, $color-red-dark);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2s);
+    }
+    
+    &--2 {   
+        background-image: linear-gradient(to right, $color-black, $color-white);
+        text-shadow: .5rem 1rem 2rem rgba($color-grey-light-2, .2s);
+    }
+}
+
+.paragraph {
+    font-size: 2.2rem;
+    color: $color-black;
+}
+
+.heading-secondary {
+    align-items: center;
+    margin: 0;
+    font-size: 3rem;
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    &--1 {
+        background-image: linear-gradient(to right, $color-blue-dark, $color-black);
+        //margin-bottom: 4rem;
+    }
+    &--2 {
+        background-image: linear-gradient(to right, $color-yellow-gold, $color-black);
+    }
+}
+
+.heading-tertiary {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: $color-white;
+}
+
+.nomargin {
+    margin: 0;
+
+}
+
+p {
+    margin: 0;
+    text-align: justify;
+}
+
+a {
+    color: $color-white;
+}

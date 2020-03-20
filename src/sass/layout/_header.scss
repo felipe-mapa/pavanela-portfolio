@@ -1,0 +1,43 @@
+.header {
+    height: 100vh;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-red-dark,.98), 
+        rgba($color-black, 0.95)), 
+    url(./assets/img/algorithms.png);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    z-index: 10;
+    
+
+    clip-path: polygon(0 0,100% 0, 100% 90%, 0 100%);
+
+    &__text-box{
+        padding: 2rem;
+        position: relative;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: block;
+    }
+    
+    &__curse-name {  
+        height: auto;
+        width: 60%;
+
+        @include respond(tab-port) {
+            width: 80%;        
+        }
+        @include respond(phone) {
+            width: 100%; 
+        }
+    }
+    
+    &__heading-sub{
+        display: block; 
+        animation: moveInUp 2.5s ease-out;
+        text-align: center;
+    }
+}

@@ -1,0 +1,136 @@
+.card {
+    // FUNCTIONALITY
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 52rem;
+    width: 35rem;
+
+    // FRONT SIZE STYLE
+    &__side {
+        height: 52rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-1 {
+                background-image: radial-gradient($color-white, $color-blue-light 200%);
+
+                &-img {
+                    height: 50%;
+                    width: auto;
+                    margin: 5rem;
+                }
+
+                &-name {
+                    height: 20%;
+                    width: auto;
+                }
+            } 
+
+            &-2 {
+                background-image: radial-gradient($color-white, $color-yellow-gold 300%);
+            
+                &-img {
+                    height: 40%;
+                    width: auto;
+                    margin: 8rem 5rem 4rem;
+                }
+
+                &-heading {
+                    padding: 0 5rem;
+                    font-size: 2.8rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    display: inline-block;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    background-image: linear-gradient(to right, $color-yellow-gold, $color-black);
+
+                }
+            } 
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+            background-color: $color-white;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    // BACK SIDE STYLE
+    &__cta {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &__workinprogress{
+        margin: 4rem 3rem;
+    }
+
+    &--bottom-margin {
+        margin-bottom: 4rem;
+    }
+
+    &__list{
+        &--block{
+            margin: 0;
+            padding: 0;
+        }
+
+        &--item{
+            font-size: 2rem;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        &--header{
+            align-items: center;
+            margin: -2rem 0 0;
+            font-size: 3rem;
+            display: inline-block;
+            -webkit-background-clip: text;
+            color: transparent;
+
+            &-1{
+                background-image: linear-gradient(to right, $color-blue-dark, $color-black);
+            }
+
+            &-2{
+                background-image: linear-gradient(to right, $color-yellow-gold, $color-black);
+            }
+        }
+    }
+} 

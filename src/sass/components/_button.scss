@@ -1,0 +1,84 @@
+.btn {
+    &,
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: .5rem 3rem;
+        display: inline-block;
+        border-radius: 8px;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+
+        //Change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
+
+    
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-grey-light-2,.2);
+        
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: $shadow-white;
+    }
+    
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &__header {
+        margin: 2rem;
+        color: $color-black;
+        background-color: $color-white;
+        animation: moveInLeft 1.5s cubic-bezier(.59,-0.08,.52,1.41);
+        animation-delay: 1.8s;
+        animation-fill-mode: both;
+        font-weight: 500;
+
+        &::after{
+            background-color: $color-white;
+        }
+        &:hover {
+            color: $color-red-dark;
+        }
+    }
+
+    &__card {
+        &--1{
+            color: $color-white;
+            background-image: linear-gradient(to right, $color-blue-dark, $color-black);
+            &::after{
+                background-color: $color-blue-dark;
+            }
+        }
+        &--2{
+            color: $color-white;
+            background-image: linear-gradient(to right, $color-yellow-gold, $color-black);
+            &::after{
+                background-color: $color-yellow-gold;
+            }
+        }
+
+    }
+}
