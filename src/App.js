@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import './App.css';
 
 import Header from './partials/header/Header'
-import Aux from './hoc/Aux'
 import About from './partials/about/About'
 import Navigation from './partials/navigation/Navigation'
 import Footer from './partials/footer/Footer'
@@ -13,14 +12,14 @@ function App() {
   const [selected, setSelected] = useState("Website")
   
   return (
-    <Aux>
+    <div>
       <Navigation />
       <Header />
       <About />
       <Categories changeCat={c => setSelected(c)} selected={selected} />
       <Projects selected={selected} />
       <Footer />
-    </Aux>
+    </div>
   );
 }
 
