@@ -35,7 +35,7 @@ const Projects = (props) => {
             title: 'Flag Finder WebApp',
             type: ['Website'],
             image: flagwebImage,
-            link: 'http://felipepavanela78601.ipage.com/test/',
+            link: 'http://flagfinderapp.com/',
             option: 'Go to page',
             description: 'The flag characteristics search engine was developed with React.js and backended with Wordpress. The headless data is shared with Flag Finder App.'
         },
