@@ -9,11 +9,11 @@ const About = () => {
     }
 
     return (
-        <section className="section-about find-section">
+        <section className="About find-section">
             <h1 className="heading-primary heading-primary--1" id="header-2">Who I am</h1>
-            <div className="section-about__shape">
-                {profImage ? <img onError={imageError} src={profileImage} alt="" className="section-about__picture"/> : null}
-                <p className="section-about__description paragraph">
+            <div className="About__shape">
+                {profImage ? <img onError={imageError} src={profileImage} alt="" className="About__picture"/> : null}
+                <p className="About__description paragraph">
                     Hi there, welcome to my portfolio.
                     I am a freelancer, full stack web developer looking forward to making your dream website come true.
                     Originally from Brazil, I moved to Australia at 18 years old where I got my Software Development Diploma.

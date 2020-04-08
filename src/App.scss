@@ -1,7 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
 
-@import "sass/App";
-
-@import "sass/abstracts/functions";
 @import "sass/abstracts/mixins";
 @import "sass/abstracts/variables";
 
@@ -11,8 +9,11 @@
 
 @import "sass/components/button";
 @import "sass/components/cards";
+@import "sass/components/form";
 
-@import "sass/layout/header";
-@import "sass/layout/navigation";
-
-@import "sass/pages/home";
+@import "sections/About/About";
+@import "sections/Categories/Categories";
+@import "sections/Footer/Footer";
+@import "sections/Header/Header";
+@import "sections/Navigation/Navigation";
+@import "sections/Projects/Projects";

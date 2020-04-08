@@ -26,8 +26,8 @@ $(window).scroll(function () {
 
     jQuery('.find-section').each(function (i) {
         if (jQuery(this).position().top <= scrollDistance) {
-            jQuery('.navigation svg.active').removeClass('active');
-            jQuery('.navigation svg').eq(i).addClass('active');
+            jQuery('.Navigation svg.active').removeClass('active');
+            jQuery('.Navigation svg').eq(i).addClass('active');
         }
     });
 }).scroll();

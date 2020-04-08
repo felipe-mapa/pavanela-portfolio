@@ -20,10 +20,10 @@
         # Mail Content
         $content = "Name: $name\nEmail: $email\n\nMessage:\n$message\n";
 
-        # email headers.
+        # Email headers.
         $headers = "From: $name <$email>";
 
-        # Send the email.
+        # Send email.
         $success = mail($mail_to, $subject, $content, $headers);
         if ($success) {
             # Set a 200 (okay) response code.

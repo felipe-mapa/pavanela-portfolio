@@ -1,0 +1,66 @@
+.Footer {
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-red-dark,.98), 
+        rgba($color-black, 0.95)), 
+    url(./assets/img/algorithms.png);
+    background-size: cover;
+    background-position: top;
+
+    padding-top: 10rem; 
+    clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
+
+    &__container {
+        padding: 0 10rem 5rem;
+        display: flex;
+        justify-content: space-between;
+
+        @include respond(tab-port) {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+        @include respond(phone) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__form{
+        width: 89%;
+        flex-basis: 33%;
+        @include respond(tab-port) {
+            flex-basis: 45%;
+        }
+        @include respond(phone) {
+            order: 2;
+        }
+    }
+
+    &__right {
+        margin: 0;
+        flex-basis: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $color-white;
+
+        &--info {
+            font-size: 1.8rem;
+        }
+
+        &--contact {
+            font-size: 1.8rem;
+        }
+
+        &--copyright {
+            align-self: flex-end;
+        }
+
+        @include respond(tab-port) {
+            flex-basis: 45%;
+        }
+        @include respond(phone) {
+            margin-top: 3rem;
+        }
+    }
+}

@@ -1,5 +1,4 @@
-// DESKTOP
-.navigation{
+.Navigation{
     z-index: 1000;
     position: fixed;
     background-color: $color-black;
@@ -96,25 +95,24 @@
     }
 }
 
-//toggle checked
 #nav-toggle:checked {
     & + #nav-toggle-button{
         background-color: $color-red-dark;
     }
 
-    & + #nav-toggle-button .navigation__hamburger--1{
+    & + #nav-toggle-button .Navigation__hamburger--1{
         transform: translateY(4.4rem) rotate(45deg);
     }
 
-    & + #nav-toggle-button .navigation__hamburger--2{
+    & + #nav-toggle-button .Navigation__hamburger--2{
         transform: translateY(4.4rem) scaleX(0);
     }
 
-    & + #nav-toggle-button .navigation__hamburger--3{
+    & + #nav-toggle-button .Navigation__hamburger--3{
         transform: translateY(4.4rem) rotate(-45deg);
     }
 
-    & ~ .navigation__item{
+    & ~ .Navigation__item{
         opacity: 1;
         visibility: visible;
         width: 4.6rem;
