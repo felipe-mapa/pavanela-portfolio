@@ -874,8 +874,11 @@ a {
     font-size: 22px; } }
 
 .Projects__box--img {
-  height: 30px;
-  margin: 0 3px; }
+  height: auto;
+  max-height: 30px;
+  width: auto;
+  max-width: 50px;
+  margin: auto 3px; }
 
 .Projects__box--button {
   cursor: pointer;

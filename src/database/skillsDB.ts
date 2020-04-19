@@ -5,6 +5,7 @@ import sassImage from '../assets/logos/programmingLanguages/sass.png'
 import typeScriptImage from '../assets/logos/programmingLanguages/typeScript.png'
 import phpImage from '../assets/logos/programmingLanguages/php.png'
 import cSharpImage from '../assets/logos/programmingLanguages/cSharp.png'
+import javaImage from '../assets/logos/programmingLanguages/java.png'
 
 import reactImage from '../assets/logos/frameworks/react.png'
 import ionicImage from '../assets/logos/frameworks/ionic.png'
@@ -55,6 +56,8 @@ import unityImage from '../assets/logos/codeEditors/unity.png'
 import trelloImage from '../assets/logos/taskTracking/trello.png'
 import samePageImage from '../assets/logos/taskTracking/samepage.png'
 
+import shopifyImage from '../assets/logos/otherTools/shopify.png'
+
 interface Skill {
   title: string;
   img: string;
@@ -101,6 +104,11 @@ export const skillsDB: SkillState = {
     {
       title: "C#",
       img: cSharpImage,
+      category: "Programming Language"
+    },
+    {
+      title: "Java",
+      img: javaImage,
       category: "Programming Language"
     },
     // Frameworks
@@ -156,7 +164,7 @@ export const skillsDB: SkillState = {
       category: "Library"
     },
     {
-      title: "JQuery",
+      title: "jQuery",
       img: jQueryImage,
       category: "Library"
     },
@@ -315,6 +323,12 @@ export const skillsDB: SkillState = {
         title: "SamePage",
         img: samePageImage,
         category: "Task Tracking"
+      },
+      // Other Tools
+      {
+        title: "Shopify",
+        img: shopifyImage,
+        category: "Other Tools"
       },
   ],
 };
