@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Tooltip from "react-simple-tooltip";
 
 import gitHubImg from "../../assets/logos/devOps/github.png";
-import linkImg from "../../assets/logos/link.png";
+import linkImg from "../../assets/img/link.png";
 
 import { projectsDB } from "../../database/projectsDB";
 import { skillsDB } from "../../database/skillsDB";

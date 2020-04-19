@@ -15,45 +15,45 @@ import laravelImage from '../assets/logos/frameworks/laravel.png'
 import reduxImage from '../assets/logos/libraries/redux.png'
 import axiosImage from '../assets/logos/libraries/axios.png'
 import routerImage from '../assets/logos/libraries/router.png'
-//import thunkImage from '../assets/logos/libraries/thunk.png'
+import thunkImage from '../assets/logos/libraries/thunk.png'
 import sagaImage from '../assets/logos/libraries/saga.png'
 import jQueryImage from '../assets/logos/libraries/jquery.png'
-//import emailImage from '../assets/logos/libraries/email.png'
+import emailImage from '../assets/logos/libraries/email.png'
 import bootstrapImage from '../assets/logos/libraries/bootstrap.png'
 import materialImage from '../assets/logos/libraries/materialui.png'
 
-// import mySqlImage from '../assets/logos/database/mysql.png'
-// import sqLiteImage from '../assets/logos/database/sqlite.png'
-// import firebaseImage from '../assets/logos/database/firebase.png'
-// import mangoDBImage from '../assets/logos/database/mangodb.png'
-// import wordPressImage from '../assets/logos/database/wordpress.png'
+import mySqlImage from '../assets/logos/database/mysql.png'
+import sqLiteImage from '../assets/logos/database/sqlite.png'
+import firebaseImage from '../assets/logos/database/firebase.png'
+import mangoDBImage from '../assets/logos/database/mangodb.png'
+import wordPressImage from '../assets/logos/database/wordpress.png'
 
-// import nodeJsImage from '../assets/logos/technologies/nodejs.png'
-// import ajaxImage from '../assets/logos/technologies/ajax.png'
-// import webpackImage from '../assets/logos/technologies/webpack.png'
-// import strapiImage from '../assets/logos/technologies/strapi.png'
-// import graphQlImage from '../assets/logos/technologies/graphql.png'
-// import apolloImage from '../assets/logos/technologies/apollo.png'
-// import npmImage from '../assets/logos/technologies/npm.png'
-// import composerImage from '../assets/logos/technologies/composer.png'
+import nodeJsImage from '../assets/logos/technologies/nodejs.png'
+import ajaxImage from '../assets/logos/technologies/ajax.png'
+import webpackImage from '../assets/logos/technologies/webpack.png'
+import strapiImage from '../assets/logos/technologies/strapi.png'
+import graphQlImage from '../assets/logos/technologies/graphql.png'
+import apolloImage from '../assets/logos/technologies/apollo.png'
+import npmImage from '../assets/logos/technologies/npm.png'
+import composerImage from '../assets/logos/technologies/composer.png'
 
-// import gitImage from '../assets/logos/devOps/git.png'
-// import gitHubImage from '../assets/logos/devOps/gihHub.png'
-// import gitLabImage from '../assets/logos/devOps/gitlab.png'
-// import azureImage from '../assets/logos/devOps/azure.png'
-// import gitKrakenImage from '../assets/logos/devOps/gitkraken.png'
+import gitImage from '../assets/logos/devOps/git.png'
+import gitHubImage from '../assets/logos/devOps/github.png'
+import gitLabImage from '../assets/logos/devOps/gitlab.png'
+import azureImage from '../assets/logos/devOps/azure.png'
+import gitKrakenImage from '../assets/logos/devOps/gitkraken.png'
 
-// import googleMapsImage from '../assets/logos/apis/googlemaps.png'
-// import adMobImage from '../assets/logos/apis/admob.png'
-// import adSenseImage from '../assets/logos/apis/adsense.png'
-// import stripeImage from '../assets/logos/apis/npm.png'
+import googleMapsImage from '../assets/logos/apis/googlemaps.png'
+import adMobImage from '../assets/logos/apis/admob.png'
+import adSenseImage from '../assets/logos/apis/adsense.png'
+import stripeImage from '../assets/logos/apis/stripe.png'
 
-// import visualCodeImage from '../assets/logos/codeEditors/visualcode.png'
-// import androidStudioImage from '../assets/logos/codeEditors/androidstudio.png'
-// import unityImage from '../assets/logos/codeEditors/unity.png'
+import visualCodeImage from '../assets/logos/codeEditors/visualcode.png'
+import androidStudioImage from '../assets/logos/codeEditors/androidstudio.png'
+import unityImage from '../assets/logos/codeEditors/unity.png'
 
-// import trelloImage from '../assets/logos/taskTracking/trello.png'
-// import samePageImage from '../assets/logos/taskTracking/samepage.png'
+import trelloImage from '../assets/logos/taskTracking/trello.png'
+import samePageImage from '../assets/logos/taskTracking/samepage.png'
 
 interface Skill {
   title: string;
@@ -71,253 +71,250 @@ export const skillsDB: SkillState = {
     {
       title: "JavaScript(ES6)",
       img: javaScriptImage,
-      category: "programming_language"
+      category: "Programming Language"
     },
     {
       title: "CSS3",
       img: cssImage,
-      category: "programming_language"
+      category: "Programming Language"
     },
     {
       title: "SASS",
       img: sassImage,
-      category: "programming_language"
+      category: "Programming Language"
     },
     {
       title: "HTML5",
       img: htmlImage,
-      category: "programming_language"
+      category: "Programming Language"
     },
     {
       title: "TypeScript",
       img: typeScriptImage,
-      category: "programming_language"
+      category: "Programming Language"
     },
     {
       title: "PHP",
       img: phpImage,
-      category: "programming_language"
+      category: "Programming Language"
     },
     {
       title: "C#",
       img: cSharpImage,
-      category: "programming_language"
+      category: "Programming Language"
     },
     // Frameworks
     {
       title: "React.js",
       img: reactImage,
-      category: "framework"
+      category: "Framework"
     },
     {
       title: "Ionic",
       img: ionicImage,
-      category: "framework"
+      category: "Framework"
     },
     {
       title: "React Native",
       img: expoImage,
-      category: "framework"
+      category: "Framework"
     },
     {
       title: "Next.js",
       img: nextImage,
-      category: "framework"
+      category: "Framework"
     },
     {
       title: "Laravel",
       img: laravelImage,
-      category: "framework"
+      category: "Framework"
     },
     // Libraries
     {
       title: "Redux",
       img: reduxImage,
-      category: "library"
+      category: "Library"
     },
     {
       title: "Router",
       img: routerImage,
-      category: "library"
+      category: "Library"
     },
     {
       title: "Axios",
       img: axiosImage,
-      category: "library"
+      category: "Library"
     },
-    // {
-    //   title: "Thunk",
-    //   img: thunkImage,
-    //   category: "library"
-    // },
+    {
+      title: "Thunk",
+      img: thunkImage,
+      category: "Library"
+    },
     {
       title: "Saga",
       img: sagaImage,
-      category: "library"
+      category: "Library"
     },
     {
       title: "JQuery",
       img: jQueryImage,
-      category: "library"
+      category: "Library"
     },
-    // {
-    //   title: "EmailJS",
-    //   img: emailImage,
-    //   category: "library"
-    // },
+    {
+      title: "EmailJS",
+      img: emailImage,
+      category: "Library"
+    },
     {
       title: "Bootstrap",
       img: bootstrapImage,
-      category: "library"
+      category: "Library"
     },
     {
       title: "MaterialUI",
       img: materialImage,
-      category: "library"
+      category: "Library"
     },
-    // //Databse
-    // {
-    //     title: "MySQL",
-    //     img: mySqlImage,
-    //     category: "Database"
-    //   },
-    //   {
-    //     title: "SQLite",
-    //     img: sqLiteImage,
-    //     category: "Database"
-    //   },
-    //   {
-    //     title: "Firebase",
-    //     img: firebaseImage,
-    //     category: "Database"
-    //   },
-    //   {
-    //     title: "MangoDB",
-    //     img: mangoDBImage,
-    //     category: "Database"
-    //   },
-    //   {
-    //     title: "WordPress",
-    //     img: wordPressImage,
-    //     category: "Database"
-    //   },
-
-
-
-    //   // Technologies
-    //   {
-    //     title: "Node.js",
-    //     img: nodeJsImage,
-    //     category: "technology"
-    //   },
-    //   {
-    //     title: "Ajax",
-    //     img: ajaxImage,
-    //     category: "technology"
-    //   },
-    //   {
-    //     title: "Webpack",
-    //     img: webpackImage,
-    //     category: "technology"
-    //   },
-    //   {
-    //     title: "Strapi",
-    //     img: strapiImage,
-    //     category: "technology"
-    //   },
-    //   {
-    //     title: "GraphQL",
-    //     img: graphQlImage,
-    //     category: "technology"
-    //   },
-    //   {
-    //     title: "Apollo",
-    //     img: apolloImage,
-    //     category: "technology"
-    //   },
-    //   {
-    //     title: "NPM",
-    //     img: npmImage,
-    //     category: "technology"
-    //   },
-    //   {
-    //     title: "Composer",
-    //     img: composerImage,
-    //     category: "technology"
-    //   },
-    //   // DevOps
-    //   {
-    //     title: "Git",
-    //     img: gitImage,
-    //     category: "devOp"
-    //   },
-    //   {
-    //     title: "GitHub",
-    //     img: gitHubImage,
-    //     category: "devOp"
-    //   },
-    //   {
-    //     title: "GitLab",
-    //     img: gitLabImage,
-    //     category: "devOp"
-    //   },
-    //   {
-    //     title: "Azure",
-    //     img: azureImage,
-    //     category: "devOp"
-    //   },
-    //   {
-    //     title: "GitKraken",
-    //     img: gitKrakenImage,
-    //     category: "devOp"
-    //   },
-    //   // API
-    //   {
-    //     title: "Google Maps",
-    //     img: googleMapsImage,
-    //     category: "api"
-    //   },
-    //   {
-    //     title: "AdMob",
-    //     img: adMobImage,
-    //     category: "api"
-    //   },
-    //   {
-    //     title: "AdSense",
-    //     img: adSenseImage,
-    //     category: "api"
-    //   },
-    //   {
-    //     title: "Stripe",
-    //     img: stripeImage,
-    //     category: "api"
-    //   },
-    //   // Source-code editor
-    //   {
-    //     title: "Visual Studio Code",
-    //     img: visualCodeImage,
-    //     category: "sourceCode"
-    //   },
-    //   {
-    //     title: "Android Studio",
-    //     img: androidStudioImage,
-    //     category: "sourceCode"
-    //   },
-    //   {
-    //     title: "Unity",
-    //     img: unityImage,
-    //     category: "sourceCode"
-    //   },
-    //   // Task tracking
-    //   {
-    //     title: "Trello",
-    //     img: trelloImage,
-    //     category: "taskTracker"
-    //   },
-    //   {
-    //     title: "SamePage",
-    //     img: samePageImage,
-    //     category: "taskTracker"
-    //   },
+    //Databse
+    {
+        title: "MySQL",
+        img: mySqlImage,
+        category: "Database"
+      },
+      {
+        title: "SQLite",
+        img: sqLiteImage,
+        category: "Database"
+      },
+      {
+        title: "Firebase",
+        img: firebaseImage,
+        category: "Database"
+      },
+      {
+        title: "MangoDB",
+        img: mangoDBImage,
+        category: "Database"
+      },
+      {
+        title: "WordPress",
+        img: wordPressImage,
+        category: "Database"
+      },
+      // Technologies
+      {
+        title: "Node.js",
+        img: nodeJsImage,
+        category: "Technologies"
+      },
+      {
+        title: "Ajax",
+        img: ajaxImage,
+        category: "Technologies"
+      },
+      {
+        title: "Webpack",
+        img: webpackImage,
+        category: "Technologies"
+      },
+      {
+        title: "Strapi",
+        img: strapiImage,
+        category: "Technologies"
+      },
+      {
+        title: "GraphQL",
+        img: graphQlImage,
+        category: "Technologies"
+      },
+      {
+        title: "Apollo",
+        img: apolloImage,
+        category: "Technologies"
+      },
+      {
+        title: "NPM",
+        img: npmImage,
+        category: "Technologies"
+      },
+      {
+        title: "Composer",
+        img: composerImage,
+        category: "Technologies"
+      },
+    // DevOps
+      {
+        title: "Git",
+        img: gitImage,
+        category: "DevOps"
+      },
+      {
+        title: "GitHub",
+        img: gitHubImage,
+        category: "DevOps"
+      },
+      {
+        title: "GitLab",
+        img: gitLabImage,
+        category: "DevOps"
+      },
+      {
+        title: "Azure",
+        img: azureImage,
+        category: "DevOps"
+      },
+      {
+        title: "GitKraken",
+        img: gitKrakenImage,
+        category: "DevOps"
+      },
+    // API
+      {
+        title: "Google Maps",
+        img: googleMapsImage,
+        category: "APIs"
+      },
+      {
+        title: "AdMob",
+        img: adMobImage,
+        category: "APIs"
+      },
+      {
+        title: "AdSense",
+        img: adSenseImage,
+        category: "APIs"
+      },
+      {
+        title: "Stripe",
+        img: stripeImage,
+        category: "APIs"
+      },
+    // Source-code editor
+      {
+        title: "Visual Studio Code",
+        img: visualCodeImage,
+        category: "Studios"
+      },
+      {
+        title: "Android Studio",
+        img: androidStudioImage,
+        category: "Studios"
+      },
+      {
+        title: "Unity",
+        img: unityImage,
+        category: "Studios"
+      },
+    // Task tracking
+      {
+        title: "Trello",
+        img: trelloImage,
+        category: "Task Tracking"
+      },
+      {
+        title: "SamePage",
+        img: samePageImage,
+        category: "Task Tracking"
+      },
   ],
 };

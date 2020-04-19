@@ -6,6 +6,14 @@
     border-radius: 10%;
     padding: 10px;
     transition-delay: .25s;
+
+    @media only screen and (max-width: 450px) {
+      width: 15rem
+    }
+
+    @media only screen and (max-width: 310px) {
+      width: 10rem
+    }
     
     &--selected {
       z-index: 20;
@@ -27,5 +35,13 @@
       text-align: center;
       margin: 10px 0 auto;
       transition-duration: .25s;
+
+      @media only screen and (max-width: 450px) {
+        font-size: 18px
+      }
+  
+      @media only screen and (max-width: 310px) {
+        font-size: 15px
+      }
     }
   }

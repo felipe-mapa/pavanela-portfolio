@@ -57,9 +57,10 @@
   }
 
   &__img {
-    height: 50px;
+    height: auto;
     width: auto;
-    margin: 0 auto;
+    max-width: 70px;
+    margin: auto;
   }
 
   &__title {
