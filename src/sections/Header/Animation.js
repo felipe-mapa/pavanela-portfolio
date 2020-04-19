@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SvgComponent = props => (
+const SvgComponent = () => (
   <svg id="header__curse-name" className="Header__curse-name" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1205.99 265.71">
     <defs>
       <clipPath id="clip-path" transform="translate(-82 -236.5)">

@@ -1,0 +1,31 @@
+.ProjectsBox {
+    width: 20rem;
+    cursor: pointer;
+    color: $color-black;
+    text-align: center;
+    border-radius: 10%;
+    padding: 10px;
+    transition-delay: .25s;
+    
+    &--selected {
+      z-index: 20;
+      outline: none;
+      border-radius: 10% 10% 0 0;
+      background-color: $color-white;
+      transform: scale(1.05);
+      transition-duration: .25s;
+      
+      .ProjectsBox--title {
+        margin: 40px 0 0;
+        transition-duration: .5s;
+        transition-delay: .5s;
+      }
+    }
+
+    &--title {
+      color: $color-black;
+      text-align: center;
+      margin: 10px 0 auto;
+      transition-duration: .25s;
+    }
+  }

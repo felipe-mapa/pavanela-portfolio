@@ -1,5 +1,5 @@
 // MENU SCROLL DOWN AND SHOW UP
-jQuery(function ($) {
+$(function ($) {
     $('a[href*="#"]:not([href="#"])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
@@ -33,5 +33,5 @@ $(window).scroll(function () {
 }).scroll();
 
 $(document).ready(function () {
-    $("#header__text-box").css("display", "block");
+    jQuery("#header__text-box").css("display", "block");
 });

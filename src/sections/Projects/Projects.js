@@ -1,62 +1,114 @@
-import React, { useState } from 'react';
-import { Link, Element, animateScroll as scroll  } from 'react-scroll'
+import React, { useState } from "react";
+import Tooltip from "react-simple-tooltip";
 
-import {projectsDB} from '../../store/projectsDB'
+import gitHubImg from "../../assets/logos/devOps/github.png";
+import linkImg from "../../assets/logos/link.png";
 
-const Projects = (props) => {
-    const [descriptionSelected, setDescriptionSelected] = useState("")
-    const [descriptionNameSelected, setDescriptionNameSelected] = useState("")
+import { projectsDB } from "../../database/projectsDB";
+import { skillsDB } from "../../database/skillsDB";
+import ProjectsType from "./ProjectsType/ProjectsType";
 
-    const listProjects = projectsDB.map((d, index) => {
-        if (d.type.includes(props.selected)) {
-            return (
-                <div className="Projects__box" key={index}>
-                    <div>
-                        <h1 className="Projects__title">{d.title}</h1>
-                        <img className="Projects__img" src={d.image} alt={d.title} />
-                        <div className="Projects__button">
-                            <Link 
-                                offset={window.innerWidth < 550 ? -60 : -400} 
-                                smooth={true} 
-                                duration={500}
-                                to="Projects__description"
-                                className="Projects__button--icon" style={{ borderRight: '0.5px #E6E6E6 solid' }} 
-                                onClick={() => descriptionChangeHandler(d)}>
-                                See Details
-                            </Link>
-                            <a target="_blank" className="Projects__button--icon" style={{ borderLeft: '0.5px #E6E6E6 solid' }} href={d.link}>{d.option}</a>
-                        </div>
-                    </div>
-                </div>)
-        } else {
-            return null
-        }
-    }).filter(function (el) {
-        return el != null;
-    })
+const Projects = () => {
+  const [typeSelected, setTypeSelected] = useState("Website");
+  const [descSelected, setDescSelected] = useState("");
 
-    const sectionDescription = (
-        <Element name="Projects__description" className="Projects__description">
-            <h1 className="Projects__title">Description of {descriptionNameSelected}</h1>
-            <p className="paragraph">{descriptionSelected}</p>
-        </Element>
-    )
+  const listProjects = projectsDB.projects.map((p, index) => {
+    const maxLength = 110;
+    let description =
+      p.description.length < maxLength || p.title === descSelected
+        ? p.description
+        : p.description.substring(0, maxLength) + "...";
 
-    const descriptionChangeHandler = (info) => {
-        setDescriptionSelected(info.description)
-        setDescriptionNameSelected(info.title)
-    }
-
-    return (
-        <Element name="Projects" className="Projects find-section">
-            <h1 className="heading-primary heading-primary--1" id="header-4">Projects</h1>
-            <div className="Projects__container" >
-                {listProjects}
+    if (p.type.includes(typeSelected)) {
+      return (
+        <div key={index} className="Projects__grid">
+          <img className="Projects__img" alt={p.title} src={p.image} />
+          <div className="Projects__box">
+            <div className="Projects__box--header">
+              <h3 className="Projects__box--title">{p.title}</h3>
+              <div>
+                {p.gitHub !== null && (
+                  <Tooltip
+                    content="Go to GitHub"
+                    placement="bottom"
+                    padding={8}
+                    radius={5}
+                    style={{ height: "40px", marginRight: "10px" }}
+                  >
+                    <a
+                      href={p.gitHub}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={gitHubImg} alt="gitHubLogo" />
+                    </a>
+                  </Tooltip>
+                )}
+                <Tooltip
+                  content={p.option}
+                  placement="bottom"
+                  padding={8}
+                  radius={5}
+                  style={{ height: "40px" }}
+                >
+                  <a href={p.link} target="_blank" rel="noopener noreferrer">
+                    <img src={linkImg} alt="linkIcon" />
+                  </a>
+                </Tooltip>
+              </div>
             </div>
+            <div>
+              {p.skills.map((s1) =>
+                skillsDB.skills.map(
+                  (s2) =>
+                    s1 === s2.title && (
+                      <Tooltip
+                        key={s2.title}
+                        content={s2.title}
+                        padding={8}
+                        radius={5}
+                      >
+                        <img
+                          src={s2.img}
+                          alt={s2.title}
+                          className="Projects__box--img"
+                        />
+                      </Tooltip>
+                    )
+                )
+              )}
+            </div>
+            <p>{description}</p>
+            {p.description.length > maxLength && (
+              <button className="Projects__box--button"
+                onClick={() =>
+                  p.title !== descSelected
+                    ? setDescSelected(p.title)
+                    : setDescSelected("")
+                }
+              >
+                {p.title !== descSelected ? "Read more" : "Hide"}
+              </button>
+            )}
+          </div>
+        </div>
+      );
+    } else return null;
+  });
 
-            {descriptionSelected !== "" ? sectionDescription : null}
-        </Element >
-    )
-}
+  return (
+    <section className="find-section">
+      >
+      <h1 className="heading-primary heading-primary--1" id="header-4">
+        Projects
+      </h1>
+      <ProjectsType
+        changeType={(c) => setTypeSelected(c)}
+        selected={typeSelected}
+      />
+      <div className="Projects__container">{listProjects}</div>
+    </section>
+  );
+};
 
-export default Projects
+export default Projects;

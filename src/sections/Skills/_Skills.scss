@@ -1,0 +1,70 @@
+.Skills {
+  height: 100%;
+  padding: 0 0 10rem;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-red-dark,
+    $color-black
+  );
+  position: relative;
+  z-index: 100;
+  align-items: center;
+  transition: all 0.1s;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+
+  @include respond(phone) {
+    padding: 5rem 0 10rem;
+  }
+
+  &__category {
+    display: flex;
+    color: $color-white;
+    margin: 3vh auto;
+    width: 80%;
+
+    @include respond(phone) {
+      margin: 0 auto;
+      flex-direction: column;
+    }
+
+    @include respond(tab-port) {
+      width: 95%;
+    }
+
+    &--title {
+      margin: 0;
+      max-width: 160px;
+      width: 100%;
+
+      @include respond(phone) {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 5px;
+      }
+    }
+
+    &--container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: baseline;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px 10px;
+  }
+
+  &__img {
+    height: 50px;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin: auto 5px 0;
+
+    text-align: center;
+  }
+}

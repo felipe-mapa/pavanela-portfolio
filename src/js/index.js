@@ -1,5 +1,5 @@
 // MENU SCROLL DOWN AND SHOW UP
-$(function () {
+$(function ($) {
     $('a[href*="#"]:not([href="#"])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
@@ -16,22 +16,22 @@ $(function () {
 
 // SHOW NAVIGATIN BAR
 $(window).scroll(function () {
-    var scrollDistance = $(window).scrollTop();
+    var scrollDistance = jQuery(window).scrollTop();
 
     if (scrollDistance >= 400) {
-        $('nav').fadeIn("slow");
+        jQuery('nav').fadeIn("slow");
     } else {
-        $('nav').fadeOut("slow");
+        jQuery('nav').fadeOut("slow");
     }
 
-    $('.find-section').each(function (i) {
-        if ($(this).position().top <= scrollDistance) {
-            $('.Navigation svg.active').removeClass('active');
-            $('.Navigation svg').eq(i).addClass('active');
+    jQuery('.find-section').each(function (i) {
+        if (jQuery(this).position().top <= scrollDistance) {
+            jQuery('.Navigation svg.active').removeClass('active');
+            jQuery('.Navigation svg').eq(i).addClass('active');
         }
     });
 }).scroll();
 
 $(document).ready(function () {
-    $("#header__text-box").css("display", "block");
+    jQuery("#header__text-box").css("display", "block");
 });
