@@ -98,7 +98,6 @@ const Projects = () => {
 
   return (
     <section className="find-section">
-      >
       <h1 className="heading-primary heading-primary--1" id="header-4">
         Projects
       </h1>

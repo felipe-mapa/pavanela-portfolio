@@ -1,6 +1,6 @@
 .Skills {
   height: 100%;
-  padding: 0 0 10rem;
+  padding: 10rem 0;
   background-image: linear-gradient(
     to right bottom,
     $color-red-dark,
@@ -10,10 +10,13 @@
   z-index: 100;
   align-items: center;
   transition: all 0.1s;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
 
   @include respond(phone) {
-    padding: 5rem 0 10rem;
+    padding: 5rem 0 10rem 0;
+    -webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
   }
 
   &__category {
