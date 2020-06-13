@@ -8,6 +8,8 @@ import flagfinderARImage from "../assets/img/flagfinderAR.jpg";
 import survivingImage from "../assets/img/surviving.jpg";
 import vrmuseumImage from "../assets/img/vrmuseum.jpeg";
 import arAppImage from "../assets/img/arapp.jpeg";
+import metOceanImage from "../assets/img/metOceanApp.jpg";
+import userlistImage from "../assets/img/userlistapp.jpg";
 
 interface Project {
   title: string;
@@ -33,9 +35,31 @@ export const projectsDB: ProjectState = {
       link: "http://flagfinderapp.com/",
       option: "Go to website",
       description:
-        "It’s a Flag characteristics Search Engine which was developed with React.js and backended with Wordpress. The data store is managed with Redux. All design was coded with CSS(SASS) and using modern JS to make it dynamic. The headless data is shared with Flag Finder Mobile App.",
+      "It’s a Flag characteristics Search Engine which was developed with React.js and backended with Wordpress. The data store is managed with Redux. All design was coded with CSS(SASS) and using modern JS to make it dynamic. The headless data is shared with Flag Finder Mobile App.",
       skills: ["React.js", "Redux", "Axios", "Router", "Thunk", "WordPress", "JavaScript(ES6)", "CSS3", "SASS", "EmailJS", "Bootstrap", "Node.js", "NPM"],
       gitHub: "https://github.com/felipe-mapa/flag-finder-web"
+    },
+    {
+      title: "MetOcean App",
+      type: "Website",
+      image: metOceanImage,
+      link: "http://felipepavanela78601.ipage.com/metocean/",
+      option: "See Demo",
+      description:
+      "It’s an Interactive metocean application to help marine professionals to make decisions based on the weather. To display the data with charts it was used Victory data visualization. The backend was originally developed with PHP and MySQL and later converted to a Laravel project. The data is managed with Redux. The design was handled mainly using MaterialUI.",
+      skills: ["React.js","Redux", "Axios", "Thunk", "TypeScript", "JavaScript(ES6)", "CSS3", "MaterialUI", "Victory", "Node.js", "NPM", "laravel", "PHP"],
+      gitHub: "https://github.com/felipe-mapa/met-ocean-app-with-laravel"
+    },
+    {
+      title: "User List App",
+      type: "Website",
+      image: userlistImage,
+      link: "http://felipepavanela78601.ipage.com/users_list_application/",
+      option: "See Demo",
+      description:
+      "A simple User Management System which there is two types of Users, Admin User who can list, update, and delete any user and Normal User who can sign up and see the list of users. The Backend was handled with PHP and the data is stored with MySql and managed with Redux. The design was handled mainly using MaterialUI.",
+      skills: ["React.js","Redux", "Axios", "Router", "Thunk", "TypeScript", "JavaScript(ES6)", "CSS3", "MaterialUI", "Node.js", "NPM", "PHP", "MySQL"],
+      gitHub: "https://github.com/felipe-mapa/users_list_application"
     },
     {
       title: "Cuppee",

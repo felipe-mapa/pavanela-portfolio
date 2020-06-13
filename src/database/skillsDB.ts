@@ -22,6 +22,7 @@ import jQueryImage from '../assets/logos/libraries/jquery.png'
 import emailImage from '../assets/logos/libraries/email.png'
 import bootstrapImage from '../assets/logos/libraries/bootstrap.png'
 import materialImage from '../assets/logos/libraries/materialui.png'
+import victoryImage from '../assets/logos/libraries/victory.png'
 
 import mySqlImage from '../assets/logos/database/mysql.png'
 import sqLiteImage from '../assets/logos/database/sqlite.png'
@@ -181,6 +182,11 @@ export const skillsDB: SkillState = {
     {
       title: "MaterialUI",
       img: materialImage,
+      category: "Library"
+    },
+    {
+      title: "Victory",
+      img: victoryImage,
       category: "Library"
     },
     //Databse
