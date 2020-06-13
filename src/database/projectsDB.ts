@@ -47,7 +47,7 @@ export const projectsDB: ProjectState = {
       option: "See Demo",
       description:
       "It’s an Interactive metocean application to help marine professionals to make decisions based on the weather. To display the data with charts it was used Victory data visualization. The backend was originally developed with PHP and MySQL and later converted to a Laravel project. The data is managed with Redux. The design was handled mainly using MaterialUI.",
-      skills: ["React.js","Redux", "Axios", "Thunk", "TypeScript", "JavaScript(ES6)", "CSS3", "MaterialUI", "Victory", "Node.js", "NPM", "laravel", "PHP"],
+      skills: ["Laravel", "PHP", "React.js","Redux", "Axios", "Thunk", "TypeScript", "JavaScript(ES6)", "CSS3", "MaterialUI", "Victory", "Node.js", "NPM"],
       gitHub: "https://github.com/felipe-mapa/met-ocean-app-with-laravel"
     },
     {
